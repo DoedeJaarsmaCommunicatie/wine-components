@@ -46,6 +46,11 @@ export const AutoFillWrapper = styled.a`
     background: #1c413f;
     color: #ffffff;
   }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
 `;
 
 export const theme = {
