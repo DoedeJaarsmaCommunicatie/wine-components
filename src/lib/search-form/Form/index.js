@@ -46,6 +46,7 @@ export class Form extends React.Component {
   }
 
   async handleSearchInput(e) {
+    const { action } = this.props;
     this.setState({ loading: true });
     this.abortControllers.forEach((abortController) => abortController.abort());
     const abortController = new AbortController();
@@ -59,7 +60,7 @@ export class Form extends React.Component {
 
     try {
       res = await (
-        await fetch(window.ajax_url + `?action=search_results&s=${value}`, {
+        await fetch(window.ajax_url + `?action=${action}&s=${value}`, {
           signal: abortController.signal,
         })
       ).json();
