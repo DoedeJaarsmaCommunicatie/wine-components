@@ -1,10 +1,17 @@
 import React from 'react'
 
-import { ExampleComponent } from '@elderbraum/wine-components'
 import '@elderbraum/wine-components/dist/index.css'
+import { SearchForm } from "@elderbraum/wine-components";
+
+const formTheme = {
+  input: {
+    color: '#1c413f',
+  },
+  border: true,
+}
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <SearchForm action={'search-items'} theme={formTheme}/>
 }
 
 export default App
