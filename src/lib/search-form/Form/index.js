@@ -81,7 +81,7 @@ export class Form extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <SearchApp className='search-app'>
+        <SearchApp className='search-app' ref={this.form}>
           <input
             placeholder='Zoek een product...'
             id='s'

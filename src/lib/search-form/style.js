@@ -43,8 +43,13 @@ export const AutoFillWrapper = styled.a`
 
   &:hover,
   &:focus {
-    background: #1c413f;
-    color: #ffffff;
+    ${(props) =>
+      props.fillItem &&
+      css({
+        background: props.fillItem.background || '#1c413f',
+        color: props.fillItem.color || '#ffffff',
+        textDecoration: props.fillItem.underline ? 'underline' : '',
+      })}
   }
 
   h3 {
@@ -63,6 +68,11 @@ export const theme = {
   },
   border: false,
   padding: '.5rem',
+  fillItem: {
+    background: 'transparent',
+    color: 'currentColor',
+    underline: true,
+  },
 };
 
 SearchApp.defaultProps = {
