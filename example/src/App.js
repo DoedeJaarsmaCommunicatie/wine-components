@@ -19,7 +19,7 @@ const App = () => {
       <SearchForm action={'search-items'} theme={formTheme}/>
 
       <h2>Shipping date</h2>
-      <ShippingDateCalculator shippingDays={3} />
+      <ShippingDateCalculator shippingDays={0} />
     </React.Fragment>
   )
 }
