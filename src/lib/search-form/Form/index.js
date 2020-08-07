@@ -32,13 +32,15 @@ export class Form extends React.Component {
   }
 
   hideSearchFill(e) {
-    if (!this.form.current) {
-      return;
-    }
+    try {
+      if (!this.form.current) {
+        return;
+      }
 
-    if (this.form.current.contains(e.target)) {
-      return;
-    }
+      if (this.form.current.contains(e.target)) {
+        return;
+      }
+    } catch {}
 
     this.setState({
       show_results: false,
