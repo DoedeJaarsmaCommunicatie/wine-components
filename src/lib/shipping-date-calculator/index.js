@@ -11,7 +11,7 @@ export class ShippingDateCalculator extends React.Component {
 
   getShippingDay() {
     const { shippingDays } = this.props;
-    const date = new Date('08/08/2020');
+    const date = new Date();
     let nextBD = addBusinessDays(date, shippingDays ?? 1);
     if (isWeekend(nextBD)) {
       nextBD = addBusinessDays(nextBD, 1);
