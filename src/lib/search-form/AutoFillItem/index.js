@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
-import { AutoFillWrapper } from '../style';
+import { FillItemWrapper } from '../style';
 
 export class AutoFillItem extends Component {
   self = createRef();
@@ -9,7 +9,7 @@ export class AutoFillItem extends Component {
     const { res } = this.props;
 
     return (
-      <AutoFillWrapper
+      <FillItemWrapper
         href={`/?p=${res.ID}`}
         key={res.ID}
         className={['search-autofill-result', `${res.post_type}-result`,].join(
@@ -19,7 +19,7 @@ export class AutoFillItem extends Component {
         <h3 title={res.post_title} className='result-title'>
           {res.post_title}
         </h3>
-      </AutoFillWrapper>
+      </FillItemWrapper>
     );
   }
 }

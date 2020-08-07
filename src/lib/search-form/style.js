@@ -19,6 +19,7 @@ export const SearchApp = styled.div`
   button {
     all: unset;
     cursor: pointer;
+    color: currentColor;
   }
 
   ${(props) =>
@@ -31,7 +32,18 @@ export const SearchApp = styled.div`
     })}
 `;
 
-export const AutoFillWrapper = styled.a`
+export const AutoFillWrapper = styled.div`
+  position: absolute;
+  top: calc(100% + 0.5rem + 1px);
+  left: calc(-0.5rem - 1px);
+  right: calc(-0.5rem - 1px);
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(51, 51, 51, 0.345);
+  z-index: 1;
+  color: #000000;
+`;
+
+export const FillItemWrapper = styled.a`
   display: block;
   margin: 0.5rem 0;
   padding: 1rem;
@@ -76,6 +88,10 @@ export const theme = {
 };
 
 SearchApp.defaultProps = {
+  theme,
+};
+
+FillItemWrapper.defaultProps = {
   theme,
 };
 

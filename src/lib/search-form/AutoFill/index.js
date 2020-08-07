@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
 import { AutoFillItem } from '../AutoFillItem';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const AutoFillWrapper = styled.div`
-  position: absolute;
-  top: calc(100% + 0.5rem + 1px);
-  left: calc(-0.5rem - 1px);
-  right: calc(-0.5rem - 1px);
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(51, 51, 51, 0.345);
-  z-index: 1;
-  color: #000000;
-`;
+import { AutoFillWrapper } from '../style';
 
 export class AutoFill extends Component {
   render() {
