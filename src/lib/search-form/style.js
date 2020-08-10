@@ -34,9 +34,9 @@ export const SearchApp = styled.div`
 
 export const AutoFillWrapper = styled.div`
   position: absolute;
-  top: calc(100% + 0.5rem + 1px);
-  left: calc(-0.5rem - 1px);
-  right: calc(-0.5rem - 1px);
+  top: calc(100% + 1px);
+  left: 0;
+  right: 0;
   background: #ffffff;
   box-shadow: 0 4px 8px rgba(51, 51, 51, 0.345);
   z-index: 1;
@@ -68,6 +68,13 @@ export const FillItemWrapper = styled.a`
     font-size: 1rem;
     font-weight: normal;
   }
+`;
+
+export const ShowAllResultsItem = styled(FillItemWrapper)`
+  background: #f4f4f4;
+  border-top-width: 2px;
+  border-top-style: solid;
+  margin-bottom: 0;
 `;
 
 export const theme = {

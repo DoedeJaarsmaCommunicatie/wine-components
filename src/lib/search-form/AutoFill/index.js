@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AutoFillItem } from '../AutoFillItem';
 import PropTypes from 'prop-types';
-import { AutoFillWrapper, FillItemWrapper } from '../style';
+import {AutoFillWrapper, FillItemWrapper, ShowAllResultsItem} from '../style';
 
 export class AutoFill extends Component {
   render() {
@@ -18,9 +18,9 @@ export class AutoFill extends Component {
             <AutoFillItem res={res} keyDownEvent={keyDownEvent} />
           ))}
 
-          <FillItemWrapper href={`/?s=${searchTerm}`}>
+          <ShowAllResultsItem href={`/?s=${searchTerm}`}>
             <h3 className='result-title'>Bekijke alle resultaten</h3>
-          </FillItemWrapper>
+          </ShowAllResultsItem>
         </nav>
       </AutoFillWrapper>
     );
