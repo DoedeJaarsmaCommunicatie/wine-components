@@ -66,7 +66,7 @@ export class Form extends React.Component {
     return (
       <form className={this.classList()} onSubmit={this.submitEventListener}>
         <input type='hidden' name='product_id' value={product} />
-        <input type='hidden' name='add_to_cart' value={product} />
+        <input type='hidden' name='add-to-cart' value={product} />
         <input type='hidden' name='quantity' value={amount} />
         <StyledButton type='submit' disabled={loading}>
           {label}
