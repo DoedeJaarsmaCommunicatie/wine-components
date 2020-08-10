@@ -18,7 +18,7 @@ export class AutoFill extends Component {
             <AutoFillItem res={res} keyDownEvent={keyDownEvent} />
           ))}
 
-          <ShowAllResultsItem href={`/?s=${searchTerm}`}>
+          <ShowAllResultsItem href={`/?s=${searchTerm}&post_type=product`}>
             <h3 className='result-title'>Bekijke alle resultaten</h3>
           </ShowAllResultsItem>
         </nav>
