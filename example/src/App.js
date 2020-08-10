@@ -1,7 +1,8 @@
 import React from 'react'
 
 import '@elderbraum/wine-components/dist/index.css'
-import { SearchForm, ShippingDateCalculator } from "@elderbraum/wine-components";
+import { SearchForm, ShippingDateCalculator, AddToCartForm } from "@elderbraum/wine-components";
+import {ThemeProvider, withTheme} from "styled-components";
 
 const formTheme = {
   input: {
@@ -9,6 +10,8 @@ const formTheme = {
   },
   border: true,
 }
+
+const StyledAddToCartForm = withTheme(AddToCartForm);
 
 const App = () => {
   return (
@@ -20,6 +23,11 @@ const App = () => {
 
       <h2>Shipping date</h2>
       <ShippingDateCalculator shippingDays={0} />
+
+      <h2>Add to cart</h2>
+      <ThemeProvider theme={{ background: '#c96464', color: '#fff', outlined: true }}>
+        <StyledAddToCartForm amount={1} product={1} label={'Fles'} />
+      </ThemeProvider>
     </React.Fragment>
   )
 }

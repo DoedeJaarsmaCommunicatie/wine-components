@@ -34,16 +34,6 @@
       "error",
       "always"
     ],
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "always",
-        "objects": "always",
-        "imports": "never",
-        "exports": "never",
-        "functions": "never"
-      }
-    ],
     "camelcase": "off"
   }
 }

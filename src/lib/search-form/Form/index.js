@@ -19,6 +19,7 @@ export class Form extends React.Component {
       show_results: false,
       results: [],
       cursor: 0,
+      searchTerm: null,
     };
     this.handleFocusEvent = this.handleFocusEvent.bind(this);
     this.hideSearchFill = this.hideSearchFill.bind(this);
@@ -74,16 +75,22 @@ export class Form extends React.Component {
       show_results: true,
       results: res.data.posts,
       loading: false,
+      searchTerm: value,
     });
   }
 
   render() {
-    const { show_results, results, loading, cursor, } = this.state;
+    const { show_results, results, loading, cursor, searchTerm } = this.state;
     const theme = merge(defaultTheme, this.props.theme);
 
     return (
       <ThemeProvider theme={theme}>
-        <SearchApp className='search-app' ref={this.form}>
+        <SearchApp
+          className='search-app'
+          ref={this.form}
+          action='/'
+          method='GET'
+        >
           <input
             placeholder='Zoek een product...'
             id='s'
@@ -109,6 +116,7 @@ export class Form extends React.Component {
               keyDownEvent={this.keyDownEvent}
               cursor={cursor}
               className='search-auto-fill'
+              searchTerm={searchTerm}
             />
           )}
         </SearchApp>

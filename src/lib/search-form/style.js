@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 
 export const SearchApp = styled.div`
   display: flex;
@@ -98,3 +98,5 @@ FillItemWrapper.defaultProps = {
 AutoFillWrapper.defaultProps = {
   theme,
 };
+
+export default withTheme(SearchApp);
