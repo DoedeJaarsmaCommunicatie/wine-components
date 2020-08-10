@@ -19,7 +19,7 @@ export class AutoFill extends Component {
           ))}
 
           <ShowAllResultsItem href={`/?s=${searchTerm}&post_type=product`}>
-            <h3 className='result-title'>Bekijke alle resultaten</h3>
+            <h3 className='result-title'>Bekijk alle resultaten</h3>
           </ShowAllResultsItem>
         </nav>
       </AutoFillWrapper>
