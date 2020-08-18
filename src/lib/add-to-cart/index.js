@@ -89,3 +89,5 @@ Form.propTypes = {
   icon: PropTypes.oneOf(['box', 'wine-bottle']),
   classes: PropTypes.array,
 };
+
+export { events };
