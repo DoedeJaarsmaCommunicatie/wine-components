@@ -7,7 +7,6 @@ export class ShippingIcon extends React.Component {
   constructor(props) {
     super(props);
     this.getShippingIcon = this.getShippingIcon.bind(this);
-
   }
 
   getShippingIcon() {

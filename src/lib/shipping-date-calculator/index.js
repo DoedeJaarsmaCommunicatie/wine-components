@@ -13,9 +13,11 @@ export class ShippingDateCalculator extends React.Component {
     const { shippingDays } = this.props;
     const date = new Date();
     let nextBD = addBusinessDays(date, shippingDays ?? 1);
+
     if (isWeekend(nextBD)) {
       nextBD = addBusinessDays(nextBD, 1);
     }
+
     if (isToday(nextBD)) {
       return 'Vandaag verzonden';
     }
@@ -31,5 +33,5 @@ export class ShippingDateCalculator extends React.Component {
 }
 
 ShippingDateCalculator.propTypes = {
-  shippingDays: PropTypes.number,
+  shippingDays: PropTypes.number.isRequired,
 };
