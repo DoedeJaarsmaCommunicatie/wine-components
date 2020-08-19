@@ -50,7 +50,8 @@
     "react-scripts": "^3.4.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "dependencies": {
     "@elderbraum/simple-event-bus": "^0.0.1",
@@ -64,6 +65,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "types": "./src/index.d.ts"
+  }
 }
