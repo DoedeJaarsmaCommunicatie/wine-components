@@ -52,8 +52,7 @@ export class FilterWrapper extends React.Component {
       urlSearchParams.append(option.param, option.value);
     }
 
-
-    window.location.href = baseUrl + urlSearchParams.toString();
+    window.location.href = `${baseUrl}?${urlSearchParams.toString()}`;
   }
 
   render() {
