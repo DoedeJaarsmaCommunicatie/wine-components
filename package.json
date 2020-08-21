@@ -4,7 +4,7 @@
   "description": "Wine components to speed up development for the wine shops",
   "author": "Pridestalker",
   "license": "MIT",
-  "repository": "Pridestalker/wine-react-components",
+  "repository": "DoedeJaarsmaCommunicatie/wine-components",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
