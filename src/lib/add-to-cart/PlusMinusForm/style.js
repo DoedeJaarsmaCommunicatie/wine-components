@@ -23,6 +23,8 @@ const QuantityInput = styled.input`
   appearance: textfield;
   text-align: center;
   border: 1px solid ${props => props.theme.borderColor};
+  width: 130px;
+  flex: 1 1 auto;
 `;
 
 const SubmitButton = styled.button`
@@ -34,7 +36,7 @@ const SubmitButton = styled.button`
   border-radius: 4px;
   padding: .5rem;
   text-align:center;
-  width: calc(100% - 1rem);
+  width: 100%;
 `;
 
 export const defaultTheme = {
