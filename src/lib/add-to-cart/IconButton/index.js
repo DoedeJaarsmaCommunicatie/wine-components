@@ -66,11 +66,9 @@ export class IconButton extends React.PureComponent {
         <input type='hidden' name='quantity' value={qty} />
 
         <StyledButton type={'submit'} disabled={loading}>
-          {label}
           <FontAwesomeIcon
             icon={loading ? faSpinner : faCartPlus }
             spin={loading}
-            style={{marginLeft: '.5rem'}}
           />
         </StyledButton>
       </form>
