@@ -89,7 +89,6 @@ export class PlusMinusForm extends React.Component {
   render() {
     const { product } = this.props;
     const { qty } = this.state;
-    console.dir(this.props);
 
     return (
       <React.StrictMode>

@@ -34,7 +34,7 @@ const SubmitButton = styled.button`
   border-radius: 4px;
   padding: .5rem;
   text-align:center;
-  width: 100%;
+  width: calc(100% - 1rem);
 `;
 
 export const defaultTheme = {
