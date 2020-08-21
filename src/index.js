@@ -1,6 +1,6 @@
 import { Form as SearchForm } from './lib/search-form';
 import { ShippingDateCalculator } from './lib/shipping-date-calculator';
-import { FormButton as AddToCartFormButton, IconButton as AddToCartIconButton } from './lib/add-to-cart';
+import { FormButton as AddToCartFormButton, IconButton as AddToCartIconButton, PlusMinusForm } from './lib/add-to-cart';
 import { FilterWrapper, SelectWrapper, OptionWrapper, events as HomepageFilterEvents } from './lib/homepage-filter';
 
 const Filter = {
@@ -10,4 +10,4 @@ const Filter = {
   HomepageFilterEvents
 }
 
-export { SearchForm, ShippingDateCalculator, AddToCartFormButton, Filter, AddToCartIconButton };
+export { SearchForm, ShippingDateCalculator, AddToCartFormButton, Filter, AddToCartIconButton, PlusMinusForm };

@@ -1,5 +1,6 @@
 import { Form, events } from "./FormButton";
 import { IconButton as IconButtonForm, events as IconButtonEvents } from "./IconButton";
+import { PlusMinusForm as PlusMinus, events as PlusMinusEvents } from './PlusMinusForm';
 
 export const FormButton = {
   Form,
@@ -11,8 +12,14 @@ export const IconButton = {
   IconButtonEvents
 }
 
+export const PlusMinusForm = {
+  PlusMinus,
+  PlusMinusEvents,
+}
+
 export default {
   FormButton,
-  IconButton
+  IconButton,
+  PlusMinusForm
 };
 
