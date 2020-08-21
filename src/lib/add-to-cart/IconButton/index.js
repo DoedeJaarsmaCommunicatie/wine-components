@@ -12,7 +12,9 @@ export class IconButton extends React.PureComponent {
 
     this.state = {
       loading: false,
-    }
+    };
+
+    this.submitEventListener = this.submitEventListener.bind(this);
   }
 
 
