@@ -67,9 +67,19 @@ export class Form extends React.Component {
           signal: abortController.signal,
         })
       ).json();
-    } catch {
+    } catch (e) {
+      if (e.name === 'AbortError') {
+        return; // Signal aborted.
+      }
+
+      this.setState({
+        show_results: false,
+        results: [],
+        loading: false,
+        searchTerm: value
+      });
       return;
-    } // Signal aborted.
+    }
 
     this.setState({
       show_results: true,
@@ -128,4 +138,6 @@ export class Form extends React.Component {
 Form.propTypes = {
   action: PropTypes.string.isRequired,
   theme: PropTypes.object,
+
+  expanding: PropTypes.bool,
 };
